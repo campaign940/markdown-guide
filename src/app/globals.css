@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* KaTeX CSS for math rendering */
+@import 'katex/dist/katex.min.css';
+
+/* Highlight.js theme for code highlighting */
+@import 'highlight.js/styles/github-dark.css';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Dark mode code blocks */
+.dark pre {
+  background-color: #1e1e1e !important;
+}
+
+.dark code {
+  background-color: #2d2d2d !important;
+  color: #e11d48 !important;
+}
+
+/* Prose dark mode adjustments */
+.dark .prose {
+  --tw-prose-body: #d1d5db;
+  --tw-prose-headings: #f9fafb;
+  --tw-prose-links: #60a5fa;
+  --tw-prose-bold: #f9fafb;
+  --tw-prose-code: #f472b6;
+  --tw-prose-pre-bg: #1e1e1e;
+}
